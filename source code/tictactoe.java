@@ -59,19 +59,61 @@ public class tictactoe extends JApplet
 						x = Integer.valueOf(xPlacement);
 						y = Integer.valueOf(yPlacement);
 						
+						int num = 0;
+						
+						if (choice.equals("X"))
+						{
+							num = 2;
+						}
+						else
+						{
+							num = 1;
+						}
+						
+						array[y - 1][x - 1] = num;
 					}
 					else
 					{
+						boolean chose = false;
+						
 						for(int i = 0; i < array.length; i++)
 						{
 							for(int d = 0; d < array[i].length; d++)
 							{
-								if(array[i][d] == 0)
+								if(!chose && array[i][d] == 0)
 								{
 									array[i][d] = 1;
+									
+									chose = true;
 								}
 							}
 						}
+					}
+					
+
+					if (array[0][0] == array[0][1] && array[0][1] == array[0][2] && array[0][2] != 0)
+					{
+						endGame = true;
+					}
+					else if (array[1][0] == array[1][1] && array[1][1] == array[1][2] && array[1][2] != 0)
+					{
+						endGame = true;
+					}
+					else if (array[2][0] == array[2][1] && array[2][1] == array[2][2] && array[2][2] != 0)
+					{
+						endGame = true;
+					}	
+					else if (array[0][0] == array[1][0] && array[1][0] == array[2][0] && array[2][0] != 0)
+					{
+						endGame = true;
+					}
+					else if (array[0][1] == array[1][1] && array[1][1] == array[2][1] && array[2][1] != 0)
+					{
+						endGame = true;
+					}
+					else if (array[0][2] == array[1][2] && array[1][2] == array[2][2] && array[2][2] != 0)
+					{
+						endGame = true;
 					}
 					
 					playersTurn = !playersTurn;
@@ -104,41 +146,41 @@ public class tictactoe extends JApplet
 				if(array[i][d] == 1)
 				{
 					// first row
-					if (i == 0 && d == 0)
+					if (d == 0 && i == 0)
 					{
 						p.drawCircle(g, 250, 100);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 1 && i == 0)
 					{
 						p.drawCircle(g, 475, 100);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 2 && i == 0)
 					{
 						p.drawCircle(g, 725, 100);
 					}
 					// second row
-					else if (i == 0 && d == 0)
+					else if (d == 0 && i == 1)
 					{
 						p.drawCircle(g, 250, 285);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 1 && i == 1)
 					{
 						p.drawCircle(g, 475, 285);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 2 && i == 1)
 					{
 						p.drawCircle(g, 725, 285);
 					}
 					// third row
-					else if (i == 0 && d == 0)
+					else if (d == 0 && i == 2)
 					{
 						p.drawCircle(g, 250, 475);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 1 && i == 2)
 					{
 						p.drawCircle(g, 475, 475);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 2 && i == 2)
 					{
 						p.drawCircle(g, 725, 475);
 					}
@@ -147,49 +189,45 @@ public class tictactoe extends JApplet
 				if(array[i][d] == 2)
 				{
 					// first row
-					if (i == 0 && d == 0)
+					if (d == 0 && i == 0)
 					{
-						p.drawCircle(g, 250, 100);
+						p.drawX(g, 250, 100);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 1 && i == 0)
 					{
-						p.drawCircle(g, 475, 100);
+						p.drawX(g, 475, 100);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 2 && i == 0)
 					{
-						p.drawCircle(g, 725, 100);
+						p.drawX(g, 725, 100);
 					}
 					// second row
-					else if (i == 0 && d == 0)
+					else if (d == 0 && i == 1)
 					{
-						p.drawCircle(g, 250, 285);
+						p.drawX(g, 250, 285);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 1 && i == 1)
 					{
-						p.drawCircle(g, 475, 285);
+						p.drawX(g, 475, 285);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 2 && i == 1)
 					{
-						p.drawCircle(g, 725, 285);
+						p.drawX(g, 725, 285);
 					}
 					// third row
-					else if (i == 0 && d == 0)
+					else if (d == 0 && i == 2)
 					{
-						p.drawCircle(g, 250, 475);
+						p.drawX(g, 250, 475);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 1 && i == 2)
 					{
-						p.drawCircle(g, 475, 475);
+						p.drawX(g, 475, 475);
 					}
-					else if (i == 0 && d == 0)
+					else if (d == 2 && i == 2)
 					{
-						p.drawCircle(g, 725, 475);
+						p.drawX(g, 725, 475);
 					}
 				}
-			}
-			//while(array[i][d] )
-			{
-	
 			}
 		}
 	}
