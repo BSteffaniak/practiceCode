@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang= "en">
+	<head> 
+		<meta charset= "utf-8"/>
+		<title>TJ Swift House</title>
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+		
+		<style>
+			body {
+				font-family Verdana, Tahoma, Arial, Sans-serif;
+				font-size: 20px;
+				overflow: auto;
+			}
+			
+			h1, h2, h3 {
+				text-align: center;
+				padding-left:5%;
+			}
+			
+			p {
+				padding: 2%;
+			}
+			
+			img {
+				text-align: center;
+				max-width: 100%;
+				height: auto;
+				width: auto;
+			}
+			
+			#wrapper {
+				margin:0 auto;
+				max-width: 1080px;
+				width: 98%;
+				background: #F1EDC2;
+				border: 1px solid #FCF6CF;
+				border-radius: 2px;
+				box-shadow: 0 0 1px 0px rgba(12, 3, 25, 0.8);
+			}
+			
+			#callout {
+				width: 100%;
+				height: auto;
+				background: #DEB887;
+				overflow: hidden;
+			}
+			
+			#callout p {
+				text-align: right;
+				font-size: 14 px;
+				padding: 0.1% 5px 0 0;
+			}
+			
+			#callout p a {
+				color: #F1F0D1;
+				text-decoration: none;
+			}
+			
+			header {
+				width: 98%;
+				min-height: 125px;
+				padding: 5px;
+				text-align: center;
+			}
+			
+			nav {
+				padding-bottom: 30px;
+			}
+			
+			nav ul {
+				list-style: none;
+				margin: 0;
+				/*padding-left: 50px;*/
+			}
+			
+			/* I changed a few things here. Is this more like the way you want it? */
+			nav ul li {
+				display: inline;
+				/*float: left;*/
+				border: 1px solid #ECF1EF;
+				/*width: 15%;*/
+			}
+			
+			nav ul li a {
+				background: #DEB887
+				display: block;
+				padding: 5% 12%;
+				font-weight: bold;
+				font-size: 18px;
+				color: 
+				text-decoration: none;
+				text-align: center;
+			}
+			
+			/* This is obviously when a link is being hovered. (You had a space inbetween the
+			   "a" and ":hover" which was breaking your code.)
+			   It is also worthy to note that you dont have to respecify the styles that you
+			   set in the style above for each of the link's states. Just specify what you want
+			   to be different about the state. (e.g. The color) */
+			nav ul li a:hover {
+				color: #123456;
+			}
+			
+			/* This is when the link is in the action of being pressed. */
+			nav ul li a:active { 
+				color: #fedcba;
+			}
+			
+			div.section ul li img#facebook-image {
+				width: 100px;
+				height: 100px;
+			}
+			
+			footer div.section ul li {
+				list-style: none;
+			}
+			
+			#einstein-img {
+				/* The 0 corresponds to the margins on the top and bottom. The auto corresponds to the
+				   margins on the left and right (thereby centering the content). */
+				margin: 0 auto;
+				
+				/* The "display: block;" is just necessary for the margins to work correctly. */
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="callout">
+				<p><b>Call us at 417-555-5555</b></p>
+			</div>
+			<header>
+				<figcaption>TJ Swift House</figcaption>
+			</header>
+			
+			<nav> 
+				<ul>
+					<li class="active"><a href="s">Home</a></li>
+					<li><a href="s">Services</a></li>
+					<li><a href="s">Online Application</a></li>
+				</ul>
+			</nav>
+			<div class="banner">
+				
+			</div>
+			
+			<!-- Don't use the <center> tag anymore, it's deprecated. Use the style "margin: 0 auto;" instead. -->
+			<img id="einstein-img" src="https://peopleint.files.wordpress.com/2012/08/only-a-life-lived-for-others-is-a-life-worthwhile-albert-einstein.jpg"/>
+			<section class="left-col">
+				<p style="text-indent: 50px;">
+					Information about TJ swift 
+				</p>
+				<p style="text-indent: 50px;">
+					Information about TJ swift
+				</p>
+			</section>
+			<aside class="sidebar">
+				<div class="House">
+				
+				</div>
+			</aside>
+			<div class="section">
+				<h3>Caring staff</h3>
+				<p>Here at TJ Swift House we want to provide the best possible care for our clients. We do this by carefully selecting our staff and training them to be professional and caring to all clients at all times.</p>
+			</div>
+			<div class="section">
+				<h3>A sense of community</h3>
+				<p>Our employees are not only working for the clients, but are also building a friendship with them. </P>
+			</div>
+			
+			<footer>
+				<div class="section">
+					<p>TJ Swift House<br>
+					phone number<br>
+					address<br>
+					West Plains Mo, 65775<br></p>
+				</div>
+				<div class="section">
+					<ul>
+						<li><a href="s"><img id="facebook-image" src="https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xpt1/v/t1.0-9/11060261_10152774863179142_5962889988024820509_n.jpg?oh=2bb0dc33baef4660bac6680896020d36&oe=5658FF6D"/></a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		<p style="text-align: center; padding: 0px">&#169;copyright - TJ Swift House, 2015.</p>
+	</body>
+</html>
